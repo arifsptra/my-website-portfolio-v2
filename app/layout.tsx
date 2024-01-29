@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,57 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        data-theme="light"
+        className={`${inter.className} w-screen h-screen`}
+      >
+        <header>
+          <p>
+            Arif<strong>.</strong>
+          </p>
+          <div>
+            <Link href="about">About</Link>
+            <Link href="about">Resume</Link>
+            <Link href="about">Portfolio</Link>
+            <Link href="about">Contact</Link>
+            <label className="cursor-pointer grid items-center">
+              <input
+                type="checkbox"
+                value="dark"
+                className="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2"
+              />
+            </label>
+            <div className="dropdown">
+              <div tabIndex={0} role="button" className="btn m-1">
+                <img
+                  className="w-6"
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACXElEQVR4nO2YQW7TQBiFn1LCoksKKwIHYIuoiuppFpyhakUP0qoHaLqnVYo4AqIsoGw4BSgcAGg29Xj8TySkhM1Dk0aRIAm2Y8eehZ/0pEhO5O/NjP//d4BatWrlFnexxh08Z4BjBnhHhW9UMFT4PbH73Btfc9/ZxhaBRvXgCo+ocEqFayowkwP8ZIAO22iVDx7gARVeU2GUGXzWIwboso375cDv4CUVogLA/90RzQD7qwN/iiYDvCkcXM0EuXD3Khp+nQqfVg6vpiGu3D2Lgm+WCq+m/swnuJs/QBnHRi3ciW4+eIWDyuDV1HvLwb/ABgOEHgSIliqxkzpPT3yeDb6NVkFNqiiPuI3HWVb/1ANo/uUAnXTwQGM8p1QNrGZ87YbG5ABuqqwelgu8mRzAjbvVg3KBj9Kc/0sPQLnAb9ME6HkAyrkO8DVNgMjjAGGaACOPAwwTA4RGRjq29NJG0gSwUeWg8XyHRpKPUBhLz9sAsSQ/xKGRS393wCaXUW3k2NsAIofJAbTd8jjAs8QAJBthbH94Bx/b744tMcB4F2Lb8TDASSr422OkW171AyNDrX89TB1gsgtdj1b/FbJKRO65xlE5vBE9GAyW+9/0JpL9qgNEIrvII23sRYUBzpBXJNe0kfflw8tHkndQhPr9/rqO5apE+A/unihSJJslVaazwlZ+niKRvZVUJyM3uR/YtLLWbujYno8bTH7woavzrmyjbLnu6MaOZWYn95swtieZO+wq5IYsLbIZGjlyM7t78XBvdm4cubWNwth+GV8TOXRTZerBrFatWvif/gCzhFAva40SWgAAAABJRU5ErkJggg=="
+                />
+              </div>
+              <ul
+                tabIndex={0}
+                className="dropdown-content z-[1] p-2 shadow-2xl bg-base-300 rounded-box w-52"
+              >
+                <li className="px-4 py-2 flex gap-2">
+                  <img
+                    className="w-6"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACXElEQVR4nO2YQW7TQBiFn1LCoksKKwIHYIuoiuppFpyhakUP0qoHaLqnVYo4AqIsoGw4BSgcAGg29Xj8TySkhM1Dk0aRIAm2Y8eehZ/0pEhO5O/NjP//d4BatWrlFnexxh08Z4BjBnhHhW9UMFT4PbH73Btfc9/ZxhaBRvXgCo+ocEqFayowkwP8ZIAO22iVDx7gARVeU2GUGXzWIwboso375cDv4CUVogLA/90RzQD7qwN/iiYDvCkcXM0EuXD3Khp+nQqfVg6vpiGu3D2Lgm+WCq+m/swnuJs/QBnHRi3ciW4+eIWDyuDV1HvLwb/ABgOEHgSIliqxkzpPT3yeDb6NVkFNqiiPuI3HWVb/1ANo/uUAnXTwQGM8p1QNrGZ87YbG5ABuqqwelgu8mRzAjbvVg3KBj9Kc/0sPQLnAb9ME6HkAyrkO8DVNgMjjAGGaACOPAwwTA4RGRjq29NJG0gSwUeWg8XyHRpKPUBhLz9sAsSQ/xKGRS393wCaXUW3k2NsAIofJAbTd8jjAs8QAJBthbH94Bx/b744tMcB4F2Lb8TDASSr422OkW171AyNDrX89TB1gsgtdj1b/FbJKRO65xlE5vBE9GAyW+9/0JpL9qgNEIrvII23sRYUBzpBXJNe0kfflw8tHkndQhPr9/rqO5apE+A/unihSJJslVaazwlZ+niKRvZVUJyM3uR/YtLLWbujYno8bTH7woavzrmyjbLnu6MaOZWYn95swtieZO+wq5IYsLbIZGjlyM7t78XBvdm4cubWNwth+GV8TOXRTZerBrFatWvif/gCzhFAva40SWgAAAABJRU5ErkJggg=="
+                  />
+                  Indonesia
+                </li>
+                <li className="px-4 py-2 flex gap-2">
+                  <img
+                    className="w-6"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADiklEQVR4nO1ZS2jUQAAN1ipKFcUPevAiCIIehG1GLJrQTG0tiCbVKlY9eBFE0YMHpfg/qSBUUESlXsRKBVspiW39i1YvrVap+MPLlq22iclkMyuo6EiiK3Xbbn6bZJF98CADOby3897M7ISiCiigAN+orb1WxPBtyxhBqmcF6ToriK9YQVJZXvzGClKKFcQ4I0jPWUFqZgRxdzkvxqh8wIq1HfNYXjpeXdeZaLjQR1hBslhd10mGj3fVP7GYHps0ODphQPpIko3NDF34uSuvFtzvGnhx4ETP98qNHeT1e0RMHDrZQzLHW3Y+ILrxzaL5nDaAIbBoQPoL5sCpQZYtCUU8UyPVNTa9Td19PED4bXcsMecvvyHZxuLtuMXhM5A2gNNGODqRrCitCUx4bHt3McOLF4eL8ENF00elrKHThJCi3Ipf3TZ59dbOW9lybjfO7MFYBhSL6AYhZEJuxG/vLq7a1N6ZLedeepDdgE4UFbUSQop9G0jHxi7nbnuQ2QE8Gjlw2pf4FcLNzbnKfCYdGYCAJDmw3pN4yLfMYARJ9pJ3J/uAUwMYAjm5asks1wYePh146SXvTvcB2w5o//ThhCvxO/Y/mt9xr/+H17w72QdcGdD0pKZp0xwbMI8HQWXfowGiqKjemfrDh8cxvNjvN/d2PXDRAfJ7pwYfHOk3T5V+c++kB24NYHNFqowttDfw+0jsO/c52QfgiPPSXlsDLC+1BJ1/Tx3QLF51ECGxL+j8ezUga6jL1kDlhnY16Px7N6D3O4nQ16Dz770D4KsjA2F0IDADjCAp+WoAc0CxNaCo+jOPK0TwVPUeWwOyii5FLlQbo8QqanQyA3vyeAZ22xowVpYu9pTPEGiU04soJ8AQ9EUtFo8s8GtH4i0DHDgUuWCYSfqgYwMfDWO2+Sci8sxrf4mHhvBcyg1kTT+WN6uPph+l3GJwcLBEUdGnqMUrKhpSFGUq5QVJuHRd1Nk3ysEmyg8wB85GWNwzlF+Q2toiA4KW0H95jhYJy46ncoF3hEyUVb05xNy3xuNkEpVLmFfe5tW3rKKfga02Kvopa6gh59frw/EZoSpFQ4kgVhtZ1ddQYUAuK5uCOXofhnTSf9ZByoDgOFq+fDoVNnBVbK65xWOOfudaPAfeYkgfwCw9h8oHpCroUoNbugdDusmAdK8B6X7zA94fms+9mANXzHfMd6PWW0AB/wt+AUd01b5eH9N0AAAAAElFTkSuQmCC"
+                  />
+                  English
+                </li>
+              </ul>
+            </div>
+          </div>
+        </header>
+        {children}
+      </body>
     </html>
   );
 }

@@ -15,6 +15,34 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: [
+      {
+        light: {
+          ...require("daisyui/src/theming/themes")["light"],
+          primary: "#0088b9",
+          secondary: "#00CBBF",
+          accent: "#f1f1f1",
+          blackTwo: "555555",
+          success: "#22bb33",
+          warning: "#f0ad4e",
+          error: "#bb2124",
+        },
+      },
+      {
+        dark: {
+          ...require("daisyui/src/theming/themes")["dark"],
+          primary: "#0088b9",
+          secondary: "#00CBBF",
+          accent: "#f1f1f1",
+          blackTwo: "555555",
+          success: "#22bb33",
+          warning: "#f0ad4e",
+          error: "#bb2124",
+        },
+      },
+    ],
+  },
 };
 export default config;
