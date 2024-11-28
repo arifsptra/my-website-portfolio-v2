@@ -62,7 +62,7 @@ const Archive = () => {
               <td className="hidden py-4 pr-4 align-top lg:table-cell max-w-72">
                 <ul className="flex -translate-y-1.5 flex-wrap">
                   {p.buildWith.map((b, x) => (
-                    <li className="my-1 mr-1.5">
+                    <li key={x} className="my-1 mr-1.5">
                       <p
                         key={x}
                         className="w-max px-3 py-1 font-medium text-sm bg-primary/10 text-primary rounded-full"
