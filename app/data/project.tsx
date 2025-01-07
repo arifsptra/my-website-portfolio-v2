@@ -258,7 +258,7 @@ export const all_projects = [
   },
   {
     year: "2022",
-    name: "Website Portfolio v1",
+    name: "Bookshelf App",
     madeAt: "",
     buildWith: ["HTML", "CSS", "Javascript"],
     link: {
