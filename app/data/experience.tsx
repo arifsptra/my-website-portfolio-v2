@@ -27,7 +27,7 @@ export const experience = [
   {
     company: "Data and Information Unit UDINUS",
     position: "System Developer",
-    website: "https://telkom.co.id",
+    website: "https://dinus.ac.id/",
     start_mount: "Jun",
     start_year: "2023",
     end_mount: "Feb",
@@ -49,7 +49,7 @@ export const experience = [
   {
     company: "VENTURI Inovasi Digital",
     position: "DevOps Engineer",
-    website: "https://telkom.co.id",
+    website: "http://www.venturidigital.studio/",
     start_mount: "May",
     start_year: "2023",
     end_mount: "Nov",
