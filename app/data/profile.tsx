@@ -3,12 +3,13 @@ import Link from "next/link";
 export const profile = {
   name: (
     <Link href={"/"}>
-      Arif Saputra<span className="text-primary">.</span>
+      Name<span className="text-primary">.</span>
     </Link>
   ),
-  role: "Full Stack Software Engineer",
+  short_name: "",
+  role: "",
   about:
-    "I craft scalable, user-centric digital solutions that bridge intuitive design with robust functionality.",
+    "",
   file_resume: "/resume.pdf",
   socialMedia: [
     {
@@ -19,8 +20,8 @@ export const profile = {
         </svg>
       ),
       title: "Github",
-      decription: "arifsptra",
-      link: "https://github.com/arifsptra",
+      decription: "username",
+      link: "https://github.com/userame",
     },
     {
       id: 2,
@@ -34,8 +35,8 @@ export const profile = {
         </svg>
       ),
       title: "LinkedIn",
-      decription: "Arif Saputra",
-      link: "https://www.linkedin.com/in/arifsptrra/",
+      decription: "Name",
+      link: "https://www.linkedin.com/in/.../",
     },
     {
       id: 3,
@@ -45,8 +46,8 @@ export const profile = {
         </svg>
       ),
       title: "Instagram",
-      decription: "@arif.sptrra",
-      link: "https://www.instagram.com/arif.sptrra",
+      decription: "@username",
+      link: "https://www.instagram.com/username",
     },
     {
       id: 4,
@@ -57,9 +58,9 @@ export const profile = {
         </svg>
       ),
       title: "GMail",
-      decription: "arif.sptrra@gmail.com",
-      link: "mailto:arif.sptrra@gmail.com",
+      decription: "...@gmail.com",
+      link: "mailto:...@gmail.com",
     },
   ],
-  photo: "/img/fotoArif.jpeg",
+  photo: "/img/foto.jpeg",
 };

@@ -10,7 +10,7 @@ const About = () => {
         <div className="w-full rounded-xl overflow-hidden">
           <Image
             src={profile.photo}
-            alt="Arif Saputra"
+            alt={profile.name.toString()}
             width={600}
             height={600}
           />

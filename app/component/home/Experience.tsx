@@ -49,13 +49,12 @@ const Experience = () => {
                   <div className="mb-4">
                     <ul className="flex flex-col gap-2">
                       {e.tasks?.map((t, i) => (
-                        <li key={i} className="flex gap-2">
+                        <li key={i} className="flex gap-2 fill-primary">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             height="18px"
                             viewBox="0 -960 960 960"
                             width="18px"
-                            fill="#0088b9"
                             className="h-6 w-4"
                           >
                             <path d="M320-200v-560l440 280-440 280Zm80-280Zm0 134 210-134-210-134v268Z" />
@@ -80,7 +79,7 @@ const Experience = () => {
             </li>
           ))}
         </ol>
-        <div className="mt-8">
+        {/* <div className="mt-8">
           <Link
             href={profile.file_resume}
             className="group flex items-baseline gap-2 w-max  rounded-lg fill-slate-800 hover:fill-primary hover:text-primary transition-all ease-in-out duration-150"
@@ -93,7 +92,7 @@ const Experience = () => {
               </svg>
             </div>
           </Link>
-        </div>
+        </div> */}
       </div>
     </section>
   );

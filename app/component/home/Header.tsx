@@ -50,7 +50,7 @@ const Header = () => {
       </ul>
 
       <p className="hidden lg:block -z-10 absolute -bottom-20 left-0 text-[200px] text-black text-opacity-5 font-bold">
-        Arif.
+        {profile.short_name}
       </p>
     </header>
   );
