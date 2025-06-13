@@ -10,7 +10,7 @@ const Experience = () => {
       className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
       aria-label="My Experience"
     >
-      <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-white lg:bg-opacity-0 bg-opacity-60 py-5 backdrop-blur md:-mx-12 lg:w-full lg:mx-0 px-6 lg:px-0">
+      <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-white dark:bg-slate-900 lg:bg-opacity-0 bg-opacity-60 py-5 backdrop-blur md:-mx-12 lg:w-full lg:mx-0 px-6 lg:px-0">
         <h2 className="text-sm font-bold uppercase tracking-widest text-primary">
           Experience
         </h2>
@@ -20,7 +20,7 @@ const Experience = () => {
           {experience.map((e, index) => (
             <li key={index} className="mb-12">
               <div className="group relative transition-all lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-                <div className="absolute -inset-x-4 -inset-y-4 -z-10 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-white lg:group-hover:bg-opacity-15 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
+                <div className="absolute -inset-x-4 -inset-y-4 -z-10 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block  lg:group-hover:bg-white dark:lg:group-hover:bg-slate-700 lg:group-hover:bg-opacity-15 dark:lg:group-hover:bg-opacity-15 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
                 <Link href={e.website} className="z-10" target="_blank">
                   <div className="flex items-baseline gap-2">
                     <div className="flex gap-2 text-lg font-medium group-hover:text-primary">
@@ -83,7 +83,7 @@ const Experience = () => {
         <div className="mt-8">
           <Link
             href={profile.file_resume}
-            className="group flex items-baseline gap-2 w-max  rounded-lg fill-slate-800 hover:fill-primary hover:text-primary transition-all ease-in-out duration-150"
+            className="group flex items-baseline gap-2 w-max  rounded-lg fill-slate-800  dark:fill-slate-400 hover:fill-primary hover:text-primary dark:hover:fill-primary transition-all ease-in-out duration-150"
             target="_blank"
           >
             <p className="text-sm font-medium">View Full Resume</p>

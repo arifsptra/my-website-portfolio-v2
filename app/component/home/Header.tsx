@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
       <div>
-        <h1 className="text-4xl font-bold tracking-tight text-slate-800 sm:text-5xl">
+        <h1 className="text-4xl font-bold tracking-tight text-slate-800 dark:text-slate-200 sm:text-5xl">
           {profile.name}
         </h1>
         <h2 className="mt-3 text-xl font-medium text-primary">
@@ -17,7 +17,7 @@ const Header = () => {
         <div className="my-5">
           <Link
             href={profile.file_resume}
-            className="group flex items-baseline gap-2 w-max  rounded-lg fill-slate-800 hover:fill-primary hover:text-primary transition-all ease-in-out duration-150"
+            className="group flex items-baseline gap-2 w-max  rounded-lg fill-slate-800 dark:fill-slate-400 hover:fill-primary hover:text-primary dark:hover:fill-primary transition-all ease-in-out duration-150"
             target="_blank"
           >
             <p className="text-sm font-medium">View Full Resume</p>
@@ -40,7 +40,7 @@ const Header = () => {
             className="lg:hover:translate-x-2 transition-all ease-in-out duration-200"
           >
             <Link href={sm.link} className="flex items-center gap-2">
-              <div className="w-6 fill-slate-800 hover:fill-slate-500 lg:hover:fill-primary lg:fill-primary">
+              <div className="w-6 fill-slate-800 dark:fill-slate-300 hover:fill-slate-500 lg:hover:fill-primary lg:fill-primary dark:lg:fill-primary">
                 {sm.icon}
               </div>
               <p className="hidden md:block">{sm.decription}</p>
@@ -49,7 +49,7 @@ const Header = () => {
         ))}
       </ul>
 
-      <p className="hidden lg:block -z-10 absolute -bottom-20 left-0 text-[200px] text-black text-opacity-5 font-bold">
+      <p className="hidden lg:block -z-10 absolute -bottom-20 left-0 text-[200px] text-black dark:text-white text-opacity-5 dark:text-opacity-5 font-bold">
         Arif.
       </p>
     </header>

@@ -20,26 +20,26 @@ const Archive = () => {
         </div>
         <p className="text-sm font-medium">Arif Saputra</p>
       </Link>
-      <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-slate-800">
+      <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-slate-800 dark:text-slate-200">
         All Projects
       </h1>
 
       <table id="project" className="mt-12 w-full border-collapse text-left">
-        <thead className="sticky top-0 z-10 border-b border-slate-300/10 bg-slate-100/75 px-6 py-5 backdrop-blur">
+        <thead className="sticky top-0 z-10 border-b border-slate-300/10 bg-slate-100/75 dark:bg-slate-800/75 px-6 py-5 backdrop-blur">
           <tr>
-            <th className="py-4 pr-8 text-sm font-semibold text-slate-800">
+            <th className="py-4 pr-8 text-sm font-semibold text-slate-800 dark:text-slate-300">
               Year
             </th>
-            <th className="py-4 pr-8 text-sm font-semibold text-slate-800">
+            <th className="py-4 pr-8 text-sm font-semibold text-slate-800 dark:text-slate-300">
               Project
             </th>
-            <th className="hidden py-4 pr-8 text-sm font-semibold text-slate-800 lg:table-cell">
+            <th className="hidden py-4 pr-8 text-sm font-semibold text-slate-800 dark:text-slate-300 lg:table-cell">
               Made at
             </th>
-            <th className="hidden py-4 pr-8 text-sm font-semibold text-slate-800 lg:table-cell">
+            <th className="hidden py-4 pr-8 text-sm font-semibold text-slate-800 dark:text-slate-300 lg:table-cell">
               Built with
             </th>
-            <th className="py-4 pr-8 text-sm font-semibold text-slate-800">
+            <th className="py-4 pr-8 text-sm font-semibold text-slate-800 dark:text-slate-300">
               Link
             </th>
           </tr>
@@ -51,7 +51,7 @@ const Archive = () => {
               className="border-b border-slate-600/10 last:border-none"
             >
               <td className="py-4 pr-4 align-top text-sm">{p.year}</td>
-              <td className="py-4 pr-4 align-top font-semibold leading-snug text-slate-800 max-w-60">
+              <td className="py-4 pr-4 align-top font-semibold leading-snug text-slate-800 dark:text-slate-300 max-w-60">
                 {p.name}
               </td>
               <td className="hidden py-4 pr-4 align-top text-sm lg:table-cell">
@@ -77,7 +77,7 @@ const Archive = () => {
                 {p.link.website && (
                   <Link
                     href={p.link.website}
-                    className="group flex items-baseline gap-2 w-max rounded-lg fill-slate-800 hover:fill-primary hover:text-primary transition-all ease-in-out duration-150"
+                    className="group flex items-baseline gap-2 w-max rounded-lg fill-slate-800 dark:fill-slate-400 hover:fill-primary hover:text-primary dark:hover:fill-primary transition-all ease-in-out duration-150"
                     target="_blank"
                   >
                     <p className="text-sm font-medium">
@@ -102,7 +102,7 @@ const Archive = () => {
                     <p className="text-sm font-medium group-hover:text-primary">
                       GitHub
                     </p>
-                    <div className="group-hover:fill-primary w-3 transition-all duration-150 ease-in-out">
+                    <div className="group-hover:fill-primary dark:fill-slate-400 w-3 transition-all duration-150 ease-in-out">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 50 50"

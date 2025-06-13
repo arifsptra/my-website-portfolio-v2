@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Inter, Poppins } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import CustomCursor from "./component/CustomCursor";
+import ThemeProvider from "./component/ThemeProvider";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -23,15 +24,18 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${poppins.className}
-        bg-white
+        dark:bg-slate-900
         leading-relaxed
-        text-slate-500
+        dark:text-slate-400
         antialiased
         selection:bg-primary
         selection:text-white
+        bg-white
+        text-slate-500
       `}
       >
         <CustomCursor />
+        <ThemeProvider />
         <div className="mx-auto max-w-screen-xl min-h-screen px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0">
           {children}
         </div>

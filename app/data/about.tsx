@@ -23,7 +23,7 @@ export const about = (
       Additionally, I founded a commercial organization called
       <Link
         href={"https://allwes.id"}
-        className="font-semibold hover:text-primary"
+        className="font-semibold hover:text-primary text-slate-900 dark:text-slate-200"
         target="_blank"
       >
         {" "}
