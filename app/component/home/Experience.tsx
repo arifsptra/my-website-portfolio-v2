@@ -22,13 +22,13 @@ const Experience = () => {
               <div className="group relative transition-all lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
                 <div className="absolute -inset-x-4 -inset-y-4 -z-10 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block  lg:group-hover:bg-white dark:lg:group-hover:bg-slate-700 lg:group-hover:bg-opacity-15 dark:lg:group-hover:bg-opacity-15 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
                 <Link href={e.website} className="z-10" target="_blank">
-                  <div className="flex items-baseline gap-2">
-                    <div className="flex gap-2 text-lg font-medium group-hover:text-primary">
+                  <div className="flex justify-between items-baseline gap-2">
+                    <div className="flex flex-col lg:flex-row lg:gap-2 text-lg font-medium group-hover:text-primary dark:text-slate-200">
                       <h3>{e.position}</h3>
-                      <p>-</p>
+                      <p className="hidden lg:block">-</p>
                       <p>{e.company}</p>
                     </div>
-                    <div className="group-hover:fill-primary w-3 -translate-x-0.5 translate-y-0.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-150 ease-in-out">
+                    <div className="group-hover:fill-primary dark:fill-slate-200 w-3 -translate-x-0.5 translate-y-0.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-150 ease-in-out">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 -960 960 960"

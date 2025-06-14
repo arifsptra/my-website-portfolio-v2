@@ -72,7 +72,7 @@ const Header = () => {
                     className={`
                       group flex items-center py-1 2xl:py-2
                       transition-colors duration-200
-                      ${isActive ? "text-slate-200" : "text-slate-500 hover:text-slate-200"}
+                      ${isActive ? "text-primary dark:text-slate-200" : "text-slate-400 dark:text-slate-500 hover:text-primary dark:hover:text-slate-200"}
                     `}
                   >
                     <span
@@ -80,8 +80,8 @@ const Header = () => {
                         nav-indicator mr-4 h-px transition-all duration-300 ease-in-out
                         ${
                           isActive
-                            ? "w-12 bg-slate-200"
-                            : "w-6 bg-slate-600 group-hover:w-12 group-hover:bg-slate-200 group-focus-visible:w-12 group-focus-visible:bg-slate-200"
+                            ? "w-12 bg-primary dark:bg-slate-200"
+                            : "w-6 bg-slate-500 dark:bg-slate-600 group-hover:w-12 group-hover:bg-primary dark:group-hover:bg-slate-200 group-focus-visible:w-12 group-focus-visible:bg-primary dark:group-focus-visible:bg-slate-200"
                         }
                       `}
                     />
@@ -90,8 +90,8 @@ const Header = () => {
                         nav-text font-bold uppercase tracking-widest transition-all duration-200
                         ${
                           isActive
-                            ? "text-slate-200 text-xs"
-                            : "text-[10px] group-hover:text-xs group-focus-visible:text-slate-200"
+                            ? "text-primary dark:text-slate-200 text-xs"
+                            : "text-[10px] group-hover:text-xs group-focus-visible:text-primary dark:group-focus-visible:text-slate-200"
                         }
                       `}
                     >

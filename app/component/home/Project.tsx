@@ -36,9 +36,9 @@ const Project = () => {
                   <div>
                     <div className="flex items-baseline gap-2">
                       <div className="flex gap-2 text-lg font-medium group-hover:text-primary">
-                        <h3>{p.name}</h3>
+                        <h3 className="dark:text-slate-200">{p.name}</h3>
                       </div>
-                      <div className="group-hover:fill-primary w-3 -translate-x-0.5 translate-y-0.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-150 ease-in-out">
+                      <div className="group-hover:fill-primary dark:fill-slate-200 w-3 -translate-x-0.5 translate-y-0.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-150 ease-in-out">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 -960 960 960"
