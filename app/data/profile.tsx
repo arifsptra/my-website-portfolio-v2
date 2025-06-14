@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { title } from "process";
 
 export const profile = {
   name: (
@@ -9,6 +10,20 @@ export const profile = {
   role: "Full Stack Software Engineer",
   about:
     "I craft scalable, user-centric digital solutions that bridge intuitive design with robust functionality.",
+  navigation: [
+    {
+      title: "About",
+      href: "#about",
+    },
+    {
+      title: "Experience",
+      href: "#experience",
+    },
+    {
+      title: "Projects",
+      href: "#projects",
+    },
+  ],
   file_resume: "/resume.pdf",
   socialMedia: [
     {

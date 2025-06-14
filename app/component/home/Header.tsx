@@ -1,8 +1,38 @@
+"use client";
 import { profile } from "@/app/data/profile";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Header = () => {
+  const [activeId, setActiveId] = useState("about");
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.filter((entry) => entry.isIntersecting);
+
+        if (visible.length === 0) return;
+
+        visible.sort(
+          (a, b) => a.boundingClientRect.top - b.boundingClientRect.top
+        );
+
+        setActiveId(visible[0].target.id);
+      },
+      {
+        threshold: 0.3,
+        rootMargin: "0px 0px -50% 0px",
+      }
+    );
+
+    profile.navigation.forEach((nav) => {
+      const el = document.getElementById(nav.href.replace("#", ""));
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
       <div>
@@ -28,6 +58,51 @@ const Header = () => {
             </div>
           </Link>
         </div>
+
+        <nav className="nav hidden lg:block">
+          <ul className="mt-6 2xl:mt-16 w-max">
+            {profile.navigation.map((nav) => {
+              const id = nav.href.replace("#", "");
+              const isActive = id === activeId;
+
+              return (
+                <li key={nav.href} className="mb-1">
+                  <Link
+                    href={nav.href}
+                    className={`
+                      group flex items-center py-1 2xl:py-2
+                      transition-colors duration-200
+                      ${isActive ? "text-slate-200" : "text-slate-500 hover:text-slate-200"}
+                    `}
+                  >
+                    <span
+                      className={`
+                        nav-indicator mr-4 h-px transition-all duration-300 ease-in-out
+                        ${
+                          isActive
+                            ? "w-12 bg-slate-200"
+                            : "w-6 bg-slate-600 group-hover:w-12 group-hover:bg-slate-200 group-focus-visible:w-12 group-focus-visible:bg-slate-200"
+                        }
+                      `}
+                    />
+                    <span
+                      className={`
+                        nav-text font-bold uppercase tracking-widest transition-all duration-200
+                        ${
+                          isActive
+                            ? "text-slate-200 text-xs"
+                            : "text-[10px] group-hover:text-xs group-focus-visible:text-slate-200"
+                        }
+                      `}
+                    >
+                      {nav.title}
+                    </span>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
       </div>
 
       <ul
