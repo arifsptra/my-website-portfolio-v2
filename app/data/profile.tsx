@@ -72,8 +72,8 @@ export const profile = {
         </svg>
       ),
       title: "GMail",
-      decription: "arif.sptrra@gmail.com",
-      link: "mailto:arif.sptrra@gmail.com",
+      decription: "arifsaputradev@gmail.com",
+      link: "mailto:arifsaputradev@gmail.com",
     },
   ],
   photo: "/img/fotoArif.jpeg",

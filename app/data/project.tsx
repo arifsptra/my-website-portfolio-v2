@@ -1,5 +1,21 @@
 export const preview_projects = [
   {
+    link: "https://simpays.id/download",
+    image: "/img/projects/simpays-mobile.png",
+    name: "Simpays Mobile",
+    description:
+      "A dedicated school management application that empowers parents and students with integrated digital payment solutions for tuition fees, academic tracking, and real-time school notifications.",
+    buildWith: ["Flutter", "Dart", "iOS", "Android"],
+  },
+  {
+    link: "https://simpays.id",
+    image: "/img/projects/simpays-web.png",
+    name: "Simpays Web & School Dashboard",
+    description:
+      "A comprehensive school ERP system designed to digitize administrative workflows, manage student databases, and maximize institutional potential through automated financial reporting.",
+    buildWith: ["ReactJS", "Typescript", "Go", "MongoDB", "TailwindCSS"],
+  },
+  {
     link: "https://bengkelkoding.dinus.ac.id",
     image: "/img/projects/bengkelkoding.png",
     name: "Bengkel Koding",
@@ -15,22 +31,6 @@ export const preview_projects = [
     ],
   },
   {
-    link: "https://innocent.svcc.io",
-    image: "/img/projects/innocent.png",
-    name: "Innocent",
-    description:
-      "A Virtual Reality tour experience designed for an immersive engagement.",
-    buildWith: ["NextJS", "NodeJS", "PrismaJS", "Typescript", "MySQL", "WebGL"],
-  },
-  {
-    link: "https://seville.svcc.io",
-    image: "/img/projects/seville.png",
-    name: "Seville",
-    description:
-      "A professional landing page and documentation management system for streamlined organization.",
-    buildWith: ["NextJS", "NodeJS", "PrismaJS", "Typescript", "MySQL"],
-  },
-  {
     link: "https://siadin.dinus.ac.id",
     image: "/img/projects/siadin.png",
     name: "SiAdin (v2)",
@@ -42,35 +42,65 @@ export const preview_projects = [
 
 export const all_projects = [
   {
+    year: "2025",
+    name: "Dashboard Simpays",
+    madeAt: "Findig",
+    buildWith: ["ReactJS", "Typescript", "NodeJS", "MongoDB"],
+    link: {
+      github: "",
+      website: "https://login.simpays.id",
+    },
+  },
+  {
+    year: "2025",
+    name: "Mobile App Simpays",
+    madeAt: "Findig",
+    buildWith: ["Flutter", "Dart", "IOS", "Android"],
+    link: {
+      github: "",
+      website: "https://simpays.id/download",
+    },
+  },
+  {
+    year: "2025",
+    name: "Landing Page Simpays",
+    madeAt: "Findig",
+    buildWith: ["ReactJS", "Typescript", "Go", "MongoDB"],
+    link: {
+      github: "",
+      website: "https://simpays.id",
+    },
+  },
+  {
     year: "2024",
     name: "Website Portfolio",
     madeAt: "Allwes",
     buildWith: ["NextJS", "Typescript", "TailwindCSS"],
     link: {
       github: "",
-      website: "https://arif.allwes.id",
+      website: "https://arifsaputra.my.id",
     },
   },
-  {
-    year: "2024",
-    name: "FAVE",
-    madeAt: "Allwes",
-    buildWith: ["NextJS", "Typescript", "TailwindCSS"],
-    link: {
-      github: "",
-      website: "https://fave.allwes.id",
-    },
-  },
-  {
-    year: "2024",
-    name: "Allwes Company Profile",
-    madeAt: "Allwes",
-    buildWith: ["NextJS", "Typescript", "TailwindCSS"],
-    link: {
-      github: "",
-      website: "https://allwes.id",
-    },
-  },
+  // {
+  //   year: "2024",
+  //   name: "FAVE",
+  //   madeAt: "Allwes",
+  //   buildWith: ["NextJS", "Typescript", "TailwindCSS"],
+  //   link: {
+  //     github: "",
+  //     website: "https://fave.allwes.id",
+  //   },
+  // },
+  // {
+  //   year: "2024",
+  //   name: "Allwes Company Profile",
+  //   madeAt: "Allwes",
+  //   buildWith: ["NextJS", "Typescript", "TailwindCSS"],
+  //   link: {
+  //     github: "",
+  //     website: "https://allwes.id",
+  //   },
+  // },
   {
     year: "2024",
     name: "Bengkel Koding",

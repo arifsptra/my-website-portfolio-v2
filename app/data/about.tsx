@@ -35,8 +35,8 @@ const HoverLink = ({ href, text, logoSrc }: HoverLinkProps) => (
 export const about = (
   <div className="space-y-3">
     <p>
-      I am a seasoned Full-Stack Software Engineer with over 5 years of
-      experience crafting high-performance web applications.
+      I am a seasoned Software Engineer with over 5 years of experience crafting
+      high-performance web applications.
     </p>
     <p>
       I specialize in bridging design and functionality, creating intuitive

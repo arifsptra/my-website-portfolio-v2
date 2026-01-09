@@ -13,7 +13,7 @@ export const experience = [
       "Architected secure and scalable financial dashboards for transaction monitoring, user management, and real-time reporting.",
     ],
     results: ["https://simpays.id"],
-    tools: ["ReactJS", "Typescript", "Node.js", "PostgreSQL", "Flutter"],
+    tools: ["ReactJS", "Typescript", "Node.js", "MongoDB", "Flutter"],
   },
   {
     company: "Telkom Indonesia",
