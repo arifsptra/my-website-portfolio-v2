@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: "https://arif.allwes.id",
+  siteUrl: "https://arifsaputra.my.id",
   generateRobotsTxt: true,
   generateIndexSitemap: false,
 };

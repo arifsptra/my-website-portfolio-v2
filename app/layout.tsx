@@ -4,27 +4,24 @@ import "./globals.css";
 import CustomCursor from "./component/CustomCursor";
 import ThemeProvider from "./component/ThemeProvider";
 
-// Google Font
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
-// SEO Metadata
 export const metadata: Metadata = {
-  title: "Arif Saputra | Full Stack Software Engineer",
+  title: "Arif Saputra | Software Engineer",
   description:
-    "Arif Saputra is a Full Stack Software Engineer and the President Director of Allwes.id, showcasing expertise in end-to-end software development and strategic leadership.",
-  metadataBase: new URL("https://arif.allwes.id"),
+    "Arif Saputra is a Software Engineer, showcasing expertise in end-to-end software development and strategic leadership.",
+  metadataBase: new URL("https://arifsaputra.my.id"),
   openGraph: {
-    title: "Arif Saputra | Full Stack Software Engineer",
-    description:
-      "Explore Arif Saputra's portfolio: Full Stack Software Engineer & founder of ALLWES.ID",
-    url: "https://arif.allwes.id",
+    title: "Arif Saputra | Software Engineer",
+    description: "Explore Arif Saputra's portfolio: Software Engineer",
+    url: "https://arifsaputra.my.id",
     siteName: "Arif Saputra",
     images: [
       {
-        url: "https://arif.allwes.id/og-image.jpg",
+        url: "https://arifsaputra.my.id/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Arif Saputra",
@@ -34,14 +31,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arif Saputra | Full Stack Software Engineer",
-    description:
-      "Founder of ALLWES.ID | Building digital experiences across sectors",
-    images: ["https://arif.allwes.id/og-image.jpg"],
+    title: "Arif Saputra | Software Engineer",
+    description: "Building digital experiences across sectors",
+    images: ["https://arifsaputra.my.id/og-image.jpg"],
   },
 };
 
-// Layout Component
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -50,7 +45,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* JSON-LD Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -58,14 +52,13 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               name: "Arif Saputra",
-              url: "https://arif.allwes.id",
-              image: "https://arif.allwes.id/og-image.jpg",
-              jobTitle: "Full Stack Software Engineer",
-              worksFor: { "@type": "Organization", name: "ALLWES.ID" },
+              url: "https://arifsaputra.my.id",
+              image: "https://arifsaputra.my.id/og-image.jpg",
+              jobTitle: "Software Engineer",
+              worksFor: { "@type": "Organization", name: "Selulosa" },
               sameAs: [
                 "https://www.linkedin.com/in/arifsptra",
                 "https://github.com/arifsptra",
-                "https://twitter.com/arifsptra",
               ],
             }),
           }}

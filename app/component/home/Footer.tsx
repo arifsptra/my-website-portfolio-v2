@@ -7,12 +7,12 @@ const Footer = () => {
       <p className="text-xs">
         Crafted with love by{" "}
         <Link
-          href={"https://allwes.id"}
+          href={"https://arifsaputra.my.id"}
           className="font-semibold hover:text-primary"
           target="_blank"
         >
           {" "}
-          AllWes Indonesia{" "}
+          Arif Saputra{" "}
         </Link>
         . Designed in{" "}
         <Link

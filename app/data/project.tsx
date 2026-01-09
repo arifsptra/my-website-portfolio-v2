@@ -74,7 +74,7 @@ export const all_projects = [
   {
     year: "2024",
     name: "Website Portfolio",
-    madeAt: "Allwes",
+    madeAt: "Personal",
     buildWith: ["NextJS", "Typescript", "TailwindCSS"],
     link: {
       github: "",
