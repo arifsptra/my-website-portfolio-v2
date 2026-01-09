@@ -7,7 +7,7 @@ export const profile = {
       Arif Saputra<span className="text-primary">.</span>
     </Link>
   ),
-  role: "Full Stack Software Engineer",
+  role: "Software Engineer",
   about:
     "I craft scalable, user-centric digital solutions that bridge intuitive design with robust functionality.",
   navigation: [
