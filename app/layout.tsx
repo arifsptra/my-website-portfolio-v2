@@ -11,26 +11,34 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Arif Saputra | Software Engineer & Jasa Pembuatan Website",
+  title: "Arif Saputra | Software Engineer & Jasa Pembuatan Website Terpercaya",
   description:
     "Arif Saputra adalah Software Engineer berpengalaman menyediakan Jasa Pembuatan Website dan Aplikasi Mobile profesional. Expert in React, Next.js, and Mobile Apps.",
   keywords: [
-    "Jasa Pembuatan Website",
-    "Jasa Buat Aplikasi",
-    "Web Developer Indonesia",
     "Software Engineer Portfolio",
+    "Full Stack Developer Indonesia",
+    "Golang Backend Developer",
+    "Flutter Mobile App Developer",
+    "Next.js Expert Indonesia",
+    "Jasa Pembuatan Bot WhatsApp",
+    "Jasa Pembuatan Aplikasi SaaS",
+    "Jasa Integrasi Sistem AI",
+    "Jasa Pembuatan Website Custom",
+    "Jasa Buat Aplikasi Android iOS",
+    "Jasa Web Company Profile Premium",
+    "Web Developer Pati",
+    "Software House Pati",
+    "Jasa Pembuatan Website Pati",
+    "Jasa Pembuatan Website Kudus",
+    "Konsultan IT Jawa Tengah",
     "Arif Saputra",
-    "Next.js Developer",
-    "React Developer",
-    "Mobile App Developer",
-    "Jasa Web Company Profile",
-    "Jasa Web Landing Page",
+    "Arif Saputra Dev",
   ],
   metadataBase: new URL("https://arifsaputra.my.id"),
   openGraph: {
     title: "Arif Saputra | Software Engineer & Jasa Pembuatan Website",
     description:
-      "Arif Saputra menyediakan Jasa Pembuatan Website dan Aplikasi Kustom profesional. Tingkatkan bisnis Anda dengan solusi digital berkualitas tinggi.",
+      "Solusi Digital Terpercaya. Jasa Pembuatan Website, Aplikasi Sekolah, dan Sistem Kustom Berbasis Next.js & Flutter. Konsultasikan ide Anda sekarang.",
     url: "https://arifsaputra.my.id",
     siteName: "Arif Saputra",
     images: [
@@ -71,8 +79,19 @@ export default function RootLayout({
                 name: "Arif Saputra",
                 url: "https://arifsaputra.my.id",
                 image: "https://arifsaputra.my.id/og-image.jpg",
-                jobTitle: "Software Engineer",
+                jobTitle: "Senior Software Engineer",
                 worksFor: { "@type": "Organization", name: "Selulosa" },
+                alumniOf: { "@type": "CollegeOrUniversity", name: "Universitas Dian Nuswantoro" },
+                knowsAbout: [
+                  "Software Engineering",
+                  "Full Stack Development",
+                  "Next.js",
+                  "React",
+                  "Flutter",
+                  "System Architecture",
+                  "Financial Technology",
+                  "Education Technology"
+                ],
                 sameAs: [
                   "https://www.linkedin.com/in/arifsptra",
                   "https://github.com/arifsptra",
@@ -81,17 +100,33 @@ export default function RootLayout({
               {
                 "@context": "https://schema.org",
                 "@type": "ProfessionalService",
-                name: "Arif Saputra - Jasa Pembuatan Website",
+                name: "Arif Saputra - Jasa Pembuatan Website & Aplikasi",
                 url: "https://arifsaputra.my.id",
                 image: "https://arifsaputra.my.id/og-image.jpg",
                 description:
-                  "Jasa Pembuatan Website dan Aplikasi Mobile profesional. Kami melayani pembuatan Company Profile, Landing Page, dan Aplikasi Kustom.",
+                  "Layanan profesional pembuatan Website Company Profile, Landing Page, Sistem Manajemen Sekolah (EdTech), dan Aplikasi Fintech yang aman dan scalable.",
                 address: {
                   "@type": "PostalAddress",
                   addressCountry: "ID",
+                  addressLocality: "Semarang", 
+                  addressRegion: "Central Java"
                 },
-                priceRange: "IDR 499.000 - IDR 15.000.000",
+                priceRange: "IDR 499.000 - IDR 25.000.000+",
                 telephone: "+62-838-1698-8646",
+                openingHoursSpecification: [
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    dayOfWeek: [
+                      "Monday",
+                      "Tuesday",
+                      "Wednesday",
+                      "Thursday",
+                      "Friday"
+                    ],
+                    opens: "09:00",
+                    closes: "17:00"
+                  }
+                ]
               },
             ]),
           }}
