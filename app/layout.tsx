@@ -11,13 +11,26 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Arif Saputra | Software Engineer",
+  title: "Arif Saputra | Software Engineer & Jasa Pembuatan Website",
   description:
-    "Arif Saputra is a Software Engineer, showcasing expertise in end-to-end software development and strategic leadership.",
+    "Arif Saputra adalah Software Engineer berpengalaman menyediakan Jasa Pembuatan Website dan Aplikasi Mobile profesional. Expert in React, Next.js, and Mobile Apps.",
+  keywords: [
+    "Jasa Pembuatan Website",
+    "Jasa Buat Aplikasi",
+    "Web Developer Indonesia",
+    "Software Engineer Portfolio",
+    "Arif Saputra",
+    "Next.js Developer",
+    "React Developer",
+    "Mobile App Developer",
+    "Jasa Web Company Profile",
+    "Jasa Web Landing Page",
+  ],
   metadataBase: new URL("https://arifsaputra.my.id"),
   openGraph: {
-    title: "Arif Saputra | Software Engineer",
-    description: "Explore Arif Saputra's portfolio: Software Engineer",
+    title: "Arif Saputra | Software Engineer & Jasa Pembuatan Website",
+    description:
+      "Arif Saputra menyediakan Jasa Pembuatan Website dan Aplikasi Kustom profesional. Tingkatkan bisnis Anda dengan solusi digital berkualitas tinggi.",
     url: "https://arifsaputra.my.id",
     siteName: "Arif Saputra",
     images: [
@@ -25,15 +38,17 @@ export const metadata: Metadata = {
         url: "https://arifsaputra.my.id/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Arif Saputra",
+        alt: "Arif Saputra - Software Engineer",
       },
     ],
     type: "website",
+    locale: "id_ID",
+    alternateLocale: ["en_US"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arif Saputra | Software Engineer",
-    description: "Building digital experiences across sectors",
+    title: "Arif Saputra | Software Engineer & Jasa Pembuatan Website",
+    description: "Jasa Pembuatan Website dan Aplikasi Mobile Profesional.",
     images: ["https://arifsaputra.my.id/og-image.jpg"],
   },
 };
@@ -49,19 +64,36 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Person",
-              name: "Arif Saputra",
-              url: "https://arifsaputra.my.id",
-              image: "https://arifsaputra.my.id/og-image.jpg",
-              jobTitle: "Software Engineer",
-              worksFor: { "@type": "Organization", name: "Selulosa" },
-              sameAs: [
-                "https://www.linkedin.com/in/arifsptra",
-                "https://github.com/arifsptra",
-              ],
-            }),
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                name: "Arif Saputra",
+                url: "https://arifsaputra.my.id",
+                image: "https://arifsaputra.my.id/og-image.jpg",
+                jobTitle: "Software Engineer",
+                worksFor: { "@type": "Organization", name: "Selulosa" },
+                sameAs: [
+                  "https://www.linkedin.com/in/arifsptra",
+                  "https://github.com/arifsptra",
+                ],
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "ProfessionalService",
+                name: "Arif Saputra - Jasa Pembuatan Website",
+                url: "https://arifsaputra.my.id",
+                image: "https://arifsaputra.my.id/og-image.jpg",
+                description:
+                  "Jasa Pembuatan Website dan Aplikasi Mobile profesional. Kami melayani pembuatan Company Profile, Landing Page, dan Aplikasi Kustom.",
+                address: {
+                  "@type": "PostalAddress",
+                  addressCountry: "ID",
+                },
+                priceRange: "IDR 499.000 - IDR 15.000.000",
+                telephone: "+62-838-1698-8646",
+              },
+            ]),
           }}
         />
       </head>
