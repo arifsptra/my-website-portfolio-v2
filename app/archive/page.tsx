@@ -32,7 +32,7 @@ const Archive = () => {
       <table id="project" className="mt-12 w-full border-collapse text-left">
         <thead className="sticky top-0 z-10 border-b border-slate-300/10 bg-slate-100/75 dark:bg-slate-800/75 px-6 py-5 backdrop-blur">
           <tr>
-            <th className="py-4 pr-8 text-sm font-semibold text-slate-800 dark:text-slate-300">
+            <th className="py-4 px-2 text-sm font-semibold text-slate-800 dark:text-slate-300 text-center">
               {language === "en" ? "Year" : "Tahun"}
             </th>
             <th className="py-4 pr-8 text-sm font-semibold text-slate-800 dark:text-slate-300">
@@ -55,7 +55,7 @@ const Archive = () => {
               key={i}
               className="border-b border-slate-600/10 last:border-none"
             >
-              <td className="py-4 pr-4 align-top text-sm">{p.year}</td>
+              <td className="py-4 px-2 align-top text-sm text-center">{p.year}</td>
               <td className="py-4 pr-4 align-top font-semibold leading-snug text-slate-800 dark:text-slate-300 max-w-60">
                 {p.name}
               </td>
