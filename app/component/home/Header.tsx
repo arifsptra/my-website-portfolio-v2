@@ -2,9 +2,12 @@
 import { profile } from "@/app/data/profile";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import { useLanguage } from "../../context/LanguageContext";
 
 const Header = () => {
   const [activeId, setActiveId] = useState("about");
+  const { language } = useLanguage();
+  const currentProfile = profile[language];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -25,32 +28,34 @@ const Header = () => {
       }
     );
 
-    profile.navigation.forEach((nav) => {
+    currentProfile.navigation.forEach((nav) => {
       const el = document.getElementById(nav.href.replace("#", ""));
       if (el) observer.observe(el);
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [currentProfile.navigation]);
 
   return (
     <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
       <div>
         <h1 className="text-4xl font-bold tracking-tight text-slate-800 dark:text-slate-200 sm:text-5xl">
-          {profile.name}
+          {currentProfile.name}
         </h1>
         <h2 className="mt-3 text-xl font-medium text-primary">
-          {profile.role}
+          {currentProfile.role}
         </h2>
-        <p className="mt-4 max-w-xs leading-normal">{profile.about}</p>
+        <p className="mt-4 max-w-xs leading-normal">{currentProfile.about}</p>
 
         <div className="my-5">
           <Link
-            href={profile.file_resume}
+            href={currentProfile.file_resume}
             className="group flex items-baseline gap-2 w-max  rounded-lg fill-slate-800 dark:fill-slate-400 hover:fill-primary hover:text-primary dark:hover:fill-primary transition-all ease-in-out duration-150"
             target="_blank"
           >
-            <p className="text-sm font-medium">View Full Resume</p>
+            <p className="text-sm font-medium">
+              {language === "en" ? "View Full Resume" : "Lihat Resume Lengkap"}
+            </p>
             <div className="w-2.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-150 ease-in-out">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
                 <path d="M680-624 244-188q-11 11-28 11t-28-11q-11-11-11-28t11-28l436-436H400q-17 0-28.5-11.5T360-720q0-17 11.5-28.5T400-760h320q17 0 28.5 11.5T760-720v320q0 17-11.5 28.5T720-360q-17 0-28.5-11.5T680-400v-224Z" />
@@ -61,7 +66,7 @@ const Header = () => {
 
         <nav className="nav hidden lg:block">
           <ul className="mt-6 2xl:mt-16 w-max">
-            {profile.navigation.map((nav) => {
+            {currentProfile.navigation.map((nav) => {
               const id = nav.href.replace("#", "");
               const isActive = id === activeId;
 
@@ -109,7 +114,7 @@ const Header = () => {
         className="text-xs lg:text-sm flex lg:flex-col gap-3 mt-7 lg:mt-0 mb-10 lg:mb-0"
         aria-label="Social Media"
       >
-        {profile.socialMedia.map((sm) => (
+        {currentProfile.socialMedia.map((sm) => (
           <li
             key={sm.id}
             className="lg:hover:translate-x-2 transition-all ease-in-out duration-200"

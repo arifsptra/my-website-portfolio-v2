@@ -1,8 +1,13 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 import { all_projects } from "../data/project";
+import { useLanguage } from "../context/LanguageContext";
 
 const Archive = () => {
+  const { language } = useLanguage();
+  const currentProjects = all_projects[language];
+
   return (
     <main className="lg:py-24">
       <Link
@@ -21,23 +26,23 @@ const Archive = () => {
         <p className="text-sm font-medium">Arif Saputra</p>
       </Link>
       <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-slate-800 dark:text-slate-200">
-        All Projects
+        {language === "en" ? "All Projects" : "Semua Proyek"}
       </h1>
 
       <table id="project" className="mt-12 w-full border-collapse text-left">
         <thead className="sticky top-0 z-10 border-b border-slate-300/10 bg-slate-100/75 dark:bg-slate-800/75 px-6 py-5 backdrop-blur">
           <tr>
             <th className="py-4 pr-8 text-sm font-semibold text-slate-800 dark:text-slate-300">
-              Year
+              {language === "en" ? "Year" : "Tahun"}
             </th>
             <th className="py-4 pr-8 text-sm font-semibold text-slate-800 dark:text-slate-300">
-              Project
+              {language === "en" ? "Project" : "Proyek"}
             </th>
             <th className="hidden py-4 pr-8 text-sm font-semibold text-slate-800 dark:text-slate-300 lg:table-cell">
-              Made at
+              {language === "en" ? "Made at" : "Dibuat di"}
             </th>
             <th className="hidden py-4 pr-8 text-sm font-semibold text-slate-800 dark:text-slate-300 lg:table-cell">
-              Built with
+              {language === "en" ? "Built with" : "Dibuat dengan"}
             </th>
             <th className="py-4 pr-8 text-sm font-semibold text-slate-800 dark:text-slate-300">
               Link
@@ -45,7 +50,7 @@ const Archive = () => {
           </tr>
         </thead>
         <tbody>
-          {all_projects.map((p, i) => (
+          {currentProjects.map((p, i) => (
             <tr
               key={i}
               className="border-b border-slate-600/10 last:border-none"

@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 
+import LanguageToggle from "./LanguageToggle";
+
 const ThemeProvider = () => {
   const [theme, setTheme] = useState<"light" | "dark" | null>(null);
 
@@ -26,7 +28,8 @@ const ThemeProvider = () => {
 
   return (
     <>
-      <div className="fixed bottom-4 right-4 z-50">
+      <div className="fixed bottom-4 right-4 z-50 flex flex-col gap-3 items-center">
+        <LanguageToggle />
         <button
           onClick={toggleTheme}
           className={`relative inline-flex h-9 w-14 items-center rounded-full transition-colors duration-300 focus:outline-none ${
