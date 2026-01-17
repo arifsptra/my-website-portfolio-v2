@@ -4,6 +4,7 @@ import Experience from "./component/home/Experience";
 import Header from "./component/home/Header";
 import Project from "./component/home/Project";
 import Footer from "./component/home/Footer";
+import Pricing from "./component/home/Pricing";
 
 export default function Home() {
   return (
@@ -17,6 +18,8 @@ export default function Home() {
           <Experience />
 
           <Project />
+
+          <Pricing />
 
           <Footer />
         </main>
