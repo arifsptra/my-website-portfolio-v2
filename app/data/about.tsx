@@ -36,8 +36,8 @@ export const about = {
   en: (
     <div className="space-y-3">
       <p>
-        I am a seasoned Software Engineer with over 5 years of experience crafting
-        high-performance web and mobile applications.
+        I am a seasoned Software Engineer with over 5 years of experience
+        crafting high-performance web and mobile applications.
       </p>
       <p>
         I specialize in bridging design and functionality, creating intuitive
@@ -46,15 +46,21 @@ export const about = {
         architectures to managing databases for optimal performance.
       </p>
       <p>
-        As a leader, I have successfully guided cross-functional teams to deliver
-        end-to-end, user-centric solutions that align with business goals. I am
-        passionate about solving complex technical challenges, streamlining
-        workflows, and transforming innovative ideas into impactful digital
-        products.
+        As a leader, I have successfully guided cross-functional teams to
+        deliver end-to-end, user-centric solutions that align with business
+        goals. I am passionate about solving complex technical challenges,
+        streamlining workflows, and transforming innovative ideas into impactful
+        digital products.
       </p>
       <p className="leading-relaxed">
         Beyond my engineering career, I am a serial entrepreneur dedicated to
         digital innovation. I founded and currently serve as CEO of{" "}
+        <HoverLink
+          href="https://selulosa.com"
+          text="Selulosa"
+          logoSrc="/img/logos/selulosa.png"
+        />
+        , a digital technology company where we handle digital products like{" "}
         <HoverLink
           href="https://business.fotoin.app"
           text="Fotoin"
@@ -62,7 +68,7 @@ export const about = {
         />
         , a digital imaging platform, and{" "}
         <HoverLink
-          href="https://wator.app"
+          href="https://wator.id"
           text="Wator"
           logoSrc="/img/logos/wator.png"
         />
@@ -72,7 +78,16 @@ export const about = {
           text="riffia"
           logoSrc="/img/logos/riffia.png"
         />
-        , a creative custom apparel brand.
+        , a creative custom apparel brand. You can learn more about our B2B
+        services at{" "}
+        <Link
+          href="https://selulosa.com/layanan-b2b"
+          className="font-semibold text-slate-900 hover:text-primary dark:text-slate-200 dark:hover:text-primary decoration-slate-300 underline-offset-4 decoration-1 hover:decoration-primary transition-all"
+          target="_blank"
+        >
+          selulosa.com
+        </Link>
+        .
       </p>
       <p>
         Across all my ventures, my mission is to empower micro, small, and
@@ -84,24 +99,36 @@ export const about = {
   id: (
     <div className="space-y-3">
       <p>
-        Saya adalah Software Engineer berpengalaman dengan lebih dari 5 tahun pengalaman dalam membuat
-        aplikasi web dan seluler berkinerja tinggi.
+        Saya adalah Software Engineer berpengalaman dengan lebih dari 5 tahun
+        pengalaman dalam membuat aplikasi web dan seluler berkinerja tinggi.
       </p>
       <p>
-        Saya mengkhususkan diri dalam menjembatani desain dan fungsionalitas, menciptakan antarmuka
-        UI/UX yang intuitif, dan mengintegrasikan sistem backend yang tangguh. Keahlian saya
-        mencakup seluruh siklus hidup pengembangan, mulai dari membangun arsitektur front-end yang skalabel
+        Saya mengkhususkan diri dalam menjembatani desain dan fungsionalitas,
+        menciptakan antarmuka UI/UX yang intuitif, dan mengintegrasikan sistem
+        backend yang tangguh. Keahlian saya mencakup seluruh siklus hidup
+        pengembangan, mulai dari membangun arsitektur front-end yang skalabel
         hingga mengelola database untuk kinerja yang optimal.
       </p>
       <p>
-        Sebagai seorang pemimpin, saya telah berhasil membimbing tim lintas fungsi untuk memberikan
-        solusi end-to-end yang berpusat pada pengguna yang sejalan dengan tujuan bisnis. Saya
-        bersemangat untuk memecahkan tantangan teknis yang kompleks, menyederhanakan
-        alur kerja, dan mengubah ide-ide inovatif menjadi produk digital yang berdampak.
+        Sebagai seorang pemimpin, saya telah berhasil membimbing tim lintas
+        fungsi untuk memberikan solusi end-to-end yang berpusat pada pengguna
+        yang sejalan dengan tujuan bisnis. Saya bersemangat untuk memecahkan
+        tantangan teknis yang kompleks, menyederhanakan alur kerja, dan mengubah
+        ide-ide inovatif menjadi produk digital yang berdampak.
       </p>
       <p className="leading-relaxed">
-        Di luar karir teknik saya, saya adalah seorang pengusaha serial yang berdedikasi pada
-        inovasi digital. Saya mendirikan dan saat ini menjabat sebagai CEO{" "}
+        Di luar karir teknik saya, saya adalah seorang pengusaha serial yang
+        berdedikasi pada inovasi digital. Saya mendirikan dan saat ini menjabat
+        sebagai CEO di{" "}
+        <Link
+          href="https://selulosa.com"
+          className="font-semibold text-slate-900 hover:text-primary dark:text-slate-200 dark:hover:text-primary underline decoration-slate-300 underline-offset-4 decoration-1 hover:decoration-primary transition-all"
+          target="_blank"
+        >
+          Selulosa
+        </Link>
+        , sebuah perusahaan teknologi digital yang menangani produk digital
+        seperti{" "}
         <HoverLink
           href="https://business.fotoin.app"
           text="Fotoin"
@@ -109,7 +136,7 @@ export const about = {
         />
         , sebuah platform pencitraan digital, dan{" "}
         <HoverLink
-          href="https://wator.app"
+          href="https://wator.id"
           text="Wator"
           logoSrc="/img/logos/wator.png"
         />
@@ -119,12 +146,22 @@ export const about = {
           text="riffia"
           logoSrc="/img/logos/riffia.png"
         />
-        , sebuah merek pakaian kustom yang kreatif.
+        , sebuah merek pakaian kustom yang kreatif. Anda dapat mempelajari lebih
+        lanjut tentang layanan B2B kami di{" "}
+        <Link
+          href="https://selulosa.com"
+          className="font-semibold text-slate-900 hover:text-primary dark:text-slate-200 dark:hover:text-primary underline decoration-slate-300 underline-offset-4 decoration-1 hover:decoration-primary transition-all"
+          target="_blank"
+        >
+          selulosa.com
+        </Link>
+        .
       </p>
       <p>
-        Di seluruh usaha saya, misi saya adalah memberdayakan usaha mikro, kecil, dan
-        menengah (UMKM) untuk mencapai pertumbuhan berkelanjutan melalui
-        solusi teknologi yang disesuaikan dan pengembangan bisnis strategis.
+        Di seluruh usaha saya, misi saya adalah memberdayakan usaha mikro,
+        kecil, dan menengah (UMKM) untuk mencapai pertumbuhan berkelanjutan
+        melalui solusi teknologi yang disesuaikan dan pengembangan bisnis
+        strategis.
       </p>
     </div>
   ),
