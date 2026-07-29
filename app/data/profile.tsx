@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { title } from "process";
 
 const socialMedia = [
   {
@@ -11,7 +10,7 @@ const socialMedia = [
     ),
     title: "Github",
     decription: "arifsptra",
-    link: "https://github.com/arifsaputradev",
+    link: "https://github.com/arifsptra",
   },
   {
     id: 2,
@@ -37,7 +36,7 @@ const socialMedia = [
     ),
     title: "Instagram",
     decription: "@arif.sptrra",
-    link: "https://www.instagram.com/arifsaputradev",
+    link: "https://www.instagram.com/arif.sptrra",
   },
   {
     id: 4,
