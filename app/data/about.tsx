@@ -36,43 +36,56 @@ export const about = {
   en: (
     <div className="space-y-3">
       <p>
-        I am a seasoned Software Engineer with over 5 years of experience
-        crafting high-performance web and mobile applications.
+        I am an Entrepreneur and Software Engineer dedicated to
+        transforming innovative ideas into impactful digital products.
       </p>
       <p>
-        I specialize in bridging design and functionality, creating intuitive
-        UI/UX interfaces, and integrating robust backend systems. My expertise
-        spans the entire development lifecycle, from building scalable front-end
-        architectures to managing databases for optimal performance.
+        With deep technical roots in full-stack development, I specialize in
+        guiding cross-functional teams through the entire product
+        lifecycle—from ideation and system architecture to market launch.
       </p>
       <p>
-        As a leader, I have successfully guided cross-functional teams to
-        deliver end-to-end, user-centric solutions that align with business
-        goals. I am passionate about solving complex technical challenges,
-        streamlining workflows, and transforming innovative ideas into impactful
-        digital products.
+        I have successfully led the development of end-to-end B2B and SaaS
+        solutions, ensuring that robust backend systems and intuitive UI/UX
+        designs seamlessly integrate to align with strategic business goals. I
+        am passionate about solving complex technical challenges, streamlining
+        team workflows, and driving products to scale.
       </p>
       <p className="leading-relaxed">
-        Beyond my engineering career, I am a entrepreneur dedicated to digital
+        Beyond my engineering career, I am an entrepreneur dedicated to digital
         innovation. I founded and currently serve as CEO of{" "}
         <HoverLink
           href="https://selulosa.com"
           text="Selulosa"
           logoSrc="/img/logos/selulosa.png"
         />
-        , a digital technology company where we handle digital products like{" "}
+        , a digital technology company where we handle a diverse ecosystem of
+        SaaS products, including{" "}
         <HoverLink
           href="https://business.fotoin.app"
           text="Fotoin"
           logoSrc="/img/logos/fotoin.png"
         />
-        , a digital imaging platform, and{" "}
+        , an AI-driven digital imaging platform,{" "}
         <HoverLink
           href="https://wator.id"
           text="Wator"
           logoSrc="/img/logos/wator.png"
         />
-        , a communication automation solution. Additionally, I established{" "}
+        , a WhatsApp automation and AI communication solution,{" "}
+        <HoverLink
+          href="https://networth.selulosa.com"
+          text="Networth"
+          logoSrc="/img/logos/networth.svg"
+        />
+        , a financial and wealth management SaaS, and{" "}
+        <HoverLink
+          href="https://hayaku.selulosa.com"
+          text="Hayaku"
+          logoSrc="/img/logos/hayaku.svg"
+        />
+        , a multi-vertical point-of-sale (POS) system. Additionally, as a
+        separate venture, I established{" "}
         <HoverLink
           href="https://riffia.vercel.app"
           text="riffia"
@@ -89,58 +102,65 @@ export const about = {
         </Link>
         .
       </p>
-      <p>
-        Across all my ventures, my mission is to empower micro, small, and
-        medium-sized enterprises (MSMEs) to achieve sustainable growth through
-        tailored technological solutions and strategic business development.
-      </p>
     </div>
   ),
   id: (
     <div className="space-y-3">
       <p>
-        Saya adalah Software Engineer berpengalaman dengan lebih dari 5 tahun
-        pengalaman dalam membuat aplikasi web dan seluler berkinerja tinggi.
+        Saya adalah seorang Entrepreneur dan Software Engineer
+        yang berdedikasi untuk mewujudkan ide-ide inovatif menjadi produk
+        digital yang berdampak nyata.
       </p>
       <p>
-        Saya mengkhususkan diri dalam menjembatani desain dan fungsionalitas,
-        menciptakan antarmuka UI/UX yang intuitif, dan mengintegrasikan sistem
-        backend yang tangguh. Keahlian saya mencakup seluruh siklus hidup
-        pengembangan, mulai dari membangun arsitektur front-end yang skalabel
-        hingga mengelola database untuk kinerja yang optimal.
+        Berbekal keahlian teknis yang mendalam dalam pengembangan full-stack,
+        saya memiliki spesialisasi dalam memandu tim lintas divisi di sepanjang
+        siklus hidup produk—mulai dari tahap penggagasan dan perancangan
+        arsitektur sistem hingga peluncuran ke pasar.
       </p>
       <p>
-        Sebagai seorang pemimpin, saya telah berhasil membimbing tim lintas
-        fungsi untuk memberikan solusi end-to-end yang berpusat pada pengguna
-        yang sejalan dengan tujuan bisnis. Saya bersemangat untuk memecahkan
-        tantangan teknis yang kompleks, menyederhanakan alur kerja, dan mengubah
-        ide-ide inovatif menjadi produk digital yang berdampak.
+        Saya telah sukses memimpin pengembangan solusi B2B dan SaaS secara
+        menyeluruh (end-to-end), memastikan integrasi yang mulus antara sistem
+        backend yang tangguh dan desain UI/UX yang intuitif demi mendukung
+        tujuan strategis bisnis. Saya memiliki semangat tinggi dalam memecahkan
+        tantangan teknis yang kompleks, mengoptimalkan alur kerja tim, serta
+        mendorong skala produk agar dapat digunakan lebih luas.
       </p>
       <p className="leading-relaxed">
-        Di luar karir teknik saya, saya adalah seorang pengusaha yang
+        Di luar karir saya sebagai engineer, saya adalah seorang pengusaha yang
         berdedikasi pada inovasi digital. Saya mendirikan dan saat ini menjabat
         sebagai CEO di{" "}
-        <Link
+        <HoverLink
           href="https://selulosa.com"
-          className="font-semibold text-slate-900 hover:text-primary dark:text-slate-200 dark:hover:text-primary underline decoration-slate-300 underline-offset-4 decoration-1 hover:decoration-primary transition-all"
-          target="_blank"
-        >
-          Selulosa
-        </Link>
-        , sebuah perusahaan teknologi digital yang menangani produk digital
-        seperti{" "}
+          text="Selulosa"
+          logoSrc="/img/logos/selulosa.png"
+        />
+        , sebuah perusahaan teknologi digital di mana kami mengelola berbagai
+        ekosistem produk SaaS, termasuk{" "}
         <HoverLink
           href="https://business.fotoin.app"
           text="Fotoin"
           logoSrc="/img/logos/fotoin.png"
         />
-        , sebuah platform pencitraan digital, dan{" "}
+        , platform digital imaging berbasis AI,{" "}
         <HoverLink
           href="https://wator.id"
           text="Wator"
           logoSrc="/img/logos/wator.png"
         />
-        , solusi otomatisasi komunikasi. Selain itu, saya mendirikan{" "}
+        , solusi otomatisasi komunikasi dan AI WhatsApp,{" "}
+        <HoverLink
+          href="https://networth.selulosa.com"
+          text="Networth"
+          logoSrc="/img/logos/networth.svg"
+        />
+        , aplikasi SaaS untuk manajemen keuangan dan kekayaan, serta{" "}
+        <HoverLink
+          href="https://hayaku.selulosa.com"
+          text="Hayaku"
+          logoSrc="/img/logos/hayaku.svg"
+        />
+        , sistem point-of-sale (POS) multi-vertical. Selain itu, sebagai
+        entitas bisnis yang terpisah, saya juga mendirikan{" "}
         <HoverLink
           href="https://riffia.vercel.app"
           text="riffia"
@@ -156,12 +176,6 @@ export const about = {
           selulosa.com
         </Link>
         .
-      </p>
-      <p>
-        Di seluruh usaha saya, misi saya adalah memberdayakan usaha mikro,
-        kecil, dan menengah (UMKM) untuk mencapai pertumbuhan berkelanjutan
-        melalui solusi teknologi yang disesuaikan dan pengembangan bisnis
-        strategis.
       </p>
     </div>
   ),

@@ -72,9 +72,9 @@ const nameComponent = (
 export const profile = {
   en: {
     name: nameComponent,
-    role: "Entrepreneur & Software Engineer",
+    role: "Entrepreneur | Software Engineer",
     about:
-      "I craft scalable, user-centric digital solutions that bridge intuitive design with robust functionality.",
+      "I lead cross-functional teams to build scalable, user-centric SaaS products—guiding ideas from system architecture to successful market launch.",
     navigation: [
       { title: "About", href: "#about" },
       { title: "Experience", href: "#experience" },
@@ -86,9 +86,9 @@ export const profile = {
   },
   id: {
     name: nameComponent,
-    role: "Entrepreneur & Software Engineer",
+    role: "Entrepreneur | Software Engineer",
     about:
-      "Saya membangun solusi digital yang skalabel dan berpusat pada pengguna, menjembatani desain intuitif dengan fungsionalitas yang tangguh.",
+      "Saya memimpin tim lintas divisi untuk membangun produk SaaS yang skalabel dan berorientasi pada pengguna—mengawal development produk mulai dari arsitektur sistem hingga peluncuran yang sukses di pasar.",
     navigation: [
       { title: "Tentang", href: "#about" },
       { title: "Pengalaman", href: "#experience" },

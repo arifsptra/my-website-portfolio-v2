@@ -11,10 +11,11 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Arif Saputra | Software Engineer & Jasa Pembuatan Website Terpercaya",
+  title: "Arif Saputra | Entrepreneur & Software Engineer",
   description:
-    "Arif Saputra adalah Software Engineer berpengalaman menyediakan Jasa Pembuatan Website dan Aplikasi Mobile profesional. Expert in React, Next.js, and Mobile Apps.",
+    "Arif Saputra adalah Entrepreneur & Software Engineer berpengalaman memimpin tim lintas divisi membangun produk SaaS yang skalabel. Jasa Pembuatan Website dan Aplikasi Mobile profesional.",
   keywords: [
+    "Entrepreneur Indonesia",
     "Software Engineer Portfolio",
     "Full Stack Developer Indonesia",
     "Golang Backend Developer",
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
   ],
   metadataBase: new URL("https://arifsaputra.my.id"),
   openGraph: {
-    title: "Arif Saputra | Software Engineer & Jasa Pembuatan Website",
+    title: "Arif Saputra | Entrepreneur & Software Engineer",
     description:
       "Solusi Digital Terpercaya. Jasa Pembuatan Website, Aplikasi Sekolah, dan Sistem Kustom Berbasis Next.js & Flutter. Konsultasikan ide Anda sekarang.",
     url: "https://arifsaputra.my.id",
@@ -55,7 +56,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arif Saputra | Software Engineer & Jasa Pembuatan Website",
+    title: "Arif Saputra | Entrepreneur & Software Engineer",
     description: "Jasa Pembuatan Website dan Aplikasi Mobile Profesional.",
     images: ["https://arifsaputra.my.id/og-image.jpg"],
   },
@@ -79,11 +80,13 @@ export default function RootLayout({
                 name: "Arif Saputra",
                 url: "https://arifsaputra.my.id",
                 image: "https://arifsaputra.my.id/og-image.jpg",
-                jobTitle: "Senior Software Engineer",
+                jobTitle: "Entrepreneur & Software Engineer",
                 worksFor: { "@type": "Organization", name: "Selulosa" },
                 alumniOf: { "@type": "CollegeOrUniversity", name: "Universitas Dian Nuswantoro" },
                 knowsAbout: [
+                  "Project Management",
                   "Software Engineering",
+                  "SaaS Product Development",
                   "Full Stack Development",
                   "Next.js",
                   "React",
