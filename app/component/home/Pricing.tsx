@@ -1,13 +1,22 @@
 "use client";
+import { prefersReducedMotion, revealUp, useGSAP } from "@/app/lib/gsap";
 import Link from "next/link";
-import React from "react";
+import React, { useRef } from "react";
 import { useLanguage } from "../../context/LanguageContext";
 
 const Pricing = () => {
   const { language } = useLanguage();
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useGSAP(() => {
+    if (prefersReducedMotion()) return;
+
+    revealUp(sectionRef.current, sectionRef.current);
+  });
 
   return (
     <section
+      ref={sectionRef}
       id="pricing"
       className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
       aria-label="Partnership"

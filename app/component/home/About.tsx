@@ -1,16 +1,27 @@
 "use client";
 import { about } from "@/app/data/about";
 import { profile } from "@/app/data/profile";
+import { prefersReducedMotion, revealUp, useGSAP } from "@/app/lib/gsap";
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
 import { useLanguage } from "../../context/LanguageContext";
 
 const About = () => {
   const { language } = useLanguage();
+  const photoRef = useRef<HTMLElement>(null);
+  const aboutRef = useRef<HTMLElement>(null);
+
+  useGSAP(() => {
+    if (prefersReducedMotion()) return;
+
+    [photoRef.current, aboutRef.current].forEach((el) => {
+      if (el) revealUp(el, el);
+    });
+  });
 
   return (
     <>
-      <section id="image" className="mb-10" aria-label="My Photo">
+      <section ref={photoRef} id="image" className="mb-10" aria-label="My Photo">
         <div className="w-full rounded-xl overflow-hidden">
           <Image
             src={profile[language].photo}
@@ -22,6 +33,7 @@ const About = () => {
         </div>
       </section>
       <section
+        ref={aboutRef}
         id="about"
         className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
         aria-label="About Me"

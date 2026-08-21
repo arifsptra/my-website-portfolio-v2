@@ -1,6 +1,7 @@
 "use client";
+import { gsap, prefersReducedMotion, revealUp, useGSAP } from "@/app/lib/gsap";
 import Link from "next/link";
-import React from "react";
+import React, { useRef } from "react";
 import { experience } from "../data/experience";
 import { useLanguage } from "../context/LanguageContext";
 import ExperienceList from "../component/home/ExperienceList";
@@ -8,9 +9,27 @@ import ExperienceList from "../component/home/ExperienceList";
 const ExperiencePage = () => {
   const { language } = useLanguage();
   const currentExperience = experience[language];
+  const mainRef = useRef<HTMLElement>(null);
+
+  useGSAP(
+    () => {
+      if (prefersReducedMotion()) return;
+
+      revealUp("h1", mainRef.current);
+      gsap.from("ol > li", {
+        y: 24,
+        opacity: 0,
+        duration: 0.6,
+        ease: "power2.out",
+        stagger: 0.08,
+        scrollTrigger: { trigger: "ol", start: "top 80%" },
+      });
+    },
+    { scope: mainRef }
+  );
 
   return (
-    <main className="lg:py-24">
+    <main ref={mainRef} className="lg:py-24">
       <Link
         href={"/"}
         className="group mb-2 inline-flex items-center font-semibold leading-tight text-primary fill-primary"

@@ -1,7 +1,14 @@
 "use client";
 import Link from "next/link";
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useRef, useState } from "react";
 import { all_projects } from "../data/project";
+import {
+  gsap,
+  prefersReducedMotion,
+  revealUp,
+  ScrollTrigger,
+  useGSAP,
+} from "../lib/gsap";
 import { useLanguage } from "../context/LanguageContext";
 import ProjectCard from "../component/ProjectCard";
 
@@ -34,10 +41,34 @@ const yearRange = (year: string): [number, number] => {
 const Archive = () => {
   const { language } = useLanguage();
   const currentProjects = all_projects[language];
+  const mainRef = useRef<HTMLElement>(null);
 
   const [query, setQuery] = useState("");
   const [year, setYear] = useState("all");
   const [category, setCategory] = useState("all");
+
+  useGSAP(
+    () => {
+      if (prefersReducedMotion()) return;
+
+      revealUp("h1", mainRef.current);
+      revealUp(".mt-8", mainRef.current);
+      gsap.set("#project > *", { opacity: 0, y: 24 });
+      ScrollTrigger.batch("#project > *", {
+        start: "top bottom",
+        once: true,
+        onEnter: (batch) =>
+          gsap.to(batch, {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            ease: "power2.out",
+            stagger: 0.08,
+          }),
+      });
+    },
+    { scope: mainRef }
+  );
 
   const years = useMemo(
     () =>
@@ -103,7 +134,7 @@ const Archive = () => {
         };
 
   return (
-    <main className="lg:py-24">
+    <main ref={mainRef} className="lg:py-24">
       <Link
         href={"/"}
         className="group mb-2 inline-flex items-center font-semibold leading-tight text-primary fill-primary"

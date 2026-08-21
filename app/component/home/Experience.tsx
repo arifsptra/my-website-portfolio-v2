@@ -1,16 +1,36 @@
 "use client";
 import { experience } from "@/app/data/experience";
+import { gsap, prefersReducedMotion, revealUp, useGSAP } from "@/app/lib/gsap";
 import Link from "next/link";
-import React from "react";
+import React, { useRef } from "react";
 import { useLanguage } from "../../context/LanguageContext";
 import ExperienceList from "./ExperienceList";
 
 const Experience = () => {
   const { language } = useLanguage();
   const currentExperience = experience[language];
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useGSAP(
+    () => {
+      if (prefersReducedMotion()) return;
+
+      revealUp("h2", sectionRef.current);
+      gsap.from("ol > li", {
+        y: 24,
+        opacity: 0,
+        duration: 0.6,
+        ease: "power2.out",
+        stagger: 0.08,
+        scrollTrigger: { trigger: "ol", start: "top 80%" },
+      });
+    },
+    { scope: sectionRef }
+  );
 
   return (
     <section
+      ref={sectionRef}
       id="experience"
       className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
       aria-label="My Experience"

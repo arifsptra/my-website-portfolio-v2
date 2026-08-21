@@ -1,13 +1,30 @@
 "use client";
 import { profile } from "@/app/data/profile";
+import { gsap, prefersReducedMotion, useGSAP } from "@/app/lib/gsap";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useLanguage } from "../../context/LanguageContext";
 
 const Header = () => {
   const [activeId, setActiveId] = useState("about");
   const { language } = useLanguage();
   const currentProfile = profile[language];
+  const headerRef = useRef<HTMLElement>(null);
+
+  useGSAP(
+    () => {
+      if (prefersReducedMotion()) return;
+
+      gsap.from("[data-header-reveal]", {
+        y: 24,
+        opacity: 0,
+        duration: 0.6,
+        ease: "power2.out",
+        stagger: 0.08,
+      });
+    },
+    { scope: headerRef }
+  );
 
   useEffect(() => {
     const sectionIds = currentProfile.navigation.map((nav) =>
@@ -48,15 +65,23 @@ const Header = () => {
   }, [currentProfile.navigation]);
 
   return (
-    <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
+    <header
+      ref={headerRef}
+      className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24"
+    >
       <div>
-        <h1 className="text-4xl font-bold tracking-tight text-slate-800 dark:text-slate-200 sm:text-5xl">
+        <h1
+          data-header-reveal
+          className="text-4xl font-bold tracking-tight text-slate-800 dark:text-slate-200 sm:text-5xl"
+        >
           {currentProfile.name}
         </h1>
-        <h2 className="mt-3 text-xl font-medium text-primary">
+        <h2 data-header-reveal className="mt-3 text-xl font-medium text-primary">
           {currentProfile.role}
         </h2>
-        <p className="mt-4 max-w-xs leading-normal">{currentProfile.about}</p>
+        <p data-header-reveal className="mt-4 max-w-xs leading-normal">
+          {currentProfile.about}
+        </p>
 
         {/* <div className="my-5">
           <Link
@@ -75,7 +100,7 @@ const Header = () => {
           </Link>
         </div> */}
 
-        <nav className="nav hidden lg:block">
+        <nav data-header-reveal className="nav hidden lg:block">
           <ul className="mt-6 2xl:mt-16 w-max">
             {currentProfile.navigation.map((nav) => {
               const id = nav.href.replace("#", "");
@@ -122,6 +147,7 @@ const Header = () => {
       </div>
 
       <ul
+        data-header-reveal
         className="text-xs lg:text-sm flex lg:flex-col gap-3 mt-7 lg:mt-0 mb-10 lg:mb-0"
         aria-label="Social Media"
       >
