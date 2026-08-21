@@ -16,6 +16,9 @@ const config: Config = {
       colors: {
         primary: "#0088b9",
       },
+      boxShadow: {
+        "primary-glow": "0 10px 30px -10px rgba(0, 136, 184, 0.4)",
+      },
     },
   },
   plugins: [],
